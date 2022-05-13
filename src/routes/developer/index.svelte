@@ -1,18 +1,16 @@
 <script>
-	import Content from '../../lib/components/Content/index.svelte';
-	import Modal from 'svelte-simple-modal';
-
 	let showModal = false;
 </script>
 
 {#if showModal}
+	<!-- svelte-ignore a11y-invalid-attribute -->
 	<div class="popup_backdrop" style="display: block;" />
 	<div class="popup" style="display: block;">
 		<div class="window">
 			<div class="content confirmation" style="display: block;">
 				<header style="">
 					<h1 style="">Are you sure?</h1>
-					<a data-action="close_popup" class="close" />
+					<!-- <a data-action="close_popup" class="close" /> -->
 				</header>
 				<div class="body" style="">
 					<form name="confirm_reset_access_key" id="confirm_reset_access_key">
@@ -43,7 +41,6 @@
 		</div>
 	</div>
 {/if}
-<!-- <Modal><Content /></Modal> -->
 <!-- svelte-ignore a11y-missing-attribute -->
 <main>
 	<div class="right">
