@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: zerossl-clone
+    env: node
+    buildCommand: yarn && yarn run build
+    startCommand: node build/index.js
